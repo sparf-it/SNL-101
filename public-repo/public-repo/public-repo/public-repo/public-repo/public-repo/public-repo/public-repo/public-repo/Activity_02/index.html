@@ -7,6 +7,17 @@
     
     <style>
         /* Define your custom look here */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         }
 
         .login-container {
             background: rgba(255, 255, 255, 0);
@@ -90,22 +101,25 @@
 		<h1>Vertrouwd werken met AI: veilig en compliant</h1>
 		<h2>SNL-101</h2>
 	  </div>
-	<div class="login-container">
-		<form id="staticrypt-form" action="javascript:void(0);">
-			<input type="password" name="password" id="password" placeholder="Enter Password" autofocus>
-			
-			<div class="remember-me">
-				<input type="checkbox" id="remember-me">
-				<label for="remember-me">Remember me</label>
-			</div>
-			
-			<button type="submit" id="staticrypt-submit">Unlock</button>
-		</form>
 
-		<span id="label-error"></span>
-	</div>
+<div class="login-container">
+    <h1>{title}</h1>
+    <p id="staticrypt-instructions">{instructions}</p>
 
-{js_inject}
+    <form id="staticrypt-form" action="javascript:void(0);">
+        <input type="password" id="staticrypt-password" placeholder="Password" autofocus>
+        
+        <label id="staticrypt-remember-label" class="remember-me">
+            <input type="checkbox" id="staticrypt-remember"> Remember me
+        </label>
+        
+        <button type="submit" id="staticrypt-submit">Unlock</button>
+    </form>
+
+    <p id="staticrypt-error" class="hidden"></p>
+</div>
+
+{crypto_bootstrap}
 
   <footer>
     &copy; <span id="year"></span> Sparf IT. Alle rechten voorbehouden.
