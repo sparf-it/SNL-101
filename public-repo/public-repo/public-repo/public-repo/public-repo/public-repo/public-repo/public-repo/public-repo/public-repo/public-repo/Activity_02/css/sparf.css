@@ -1,0 +1,451 @@
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+	background-color: #F2F2F2;
+}
+
+img {
+  border: 1px solid #ccc; /* light gray */
+  border-radius: 8px;     /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+	
+div.content{
+    display: block;
+    margin: 3em auto;
+    padding: 1em 2em;
+    counter-reset: section;
+    background-color: white;
+	border-radius: 10px;
+    overflow: hidden;
+	max-width: 1024px;
+	box-shadow: 0 14px 15px rgba(0, 0, 0, 0.2); 
+}
+.content::before {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 80%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  filter: blur(8px);
+  z-index: -1;
+}
+div.overview{
+    padding-top: 15px;
+    padding-left: 20px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #8D7D7D;
+	margin-bottom: 40px;
+}
+
+div.overview-info{
+    margin-bottom: 20px;
+}
+
+div.overview span.title{
+    font-size: 1.5em;
+    margin-right: 30px;
+	color: #002251;
+}
+
+.section-card {
+    background: linear-gradient(160deg, #ffffff 0%, #f7f8fa 100%);
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        0 8px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 10px 20px rgba(0, 0, 0, 0.09),
+        0 20px 40px rgba(0, 0, 0, 0.07);
+}
+
+h2{
+   color: #ed135d;
+   margin-bottom: 2px;
+}
+
+div.overview span.title, h2{
+   font-weight: bold;
+}
+
+h1.exerciseTitle{
+	color: #338DCD;
+    font-size: 2em;
+	padding: 10px;
+    border-bottom: #002251 solid;
+
+}
+
+h1.exerciseTitle span{
+    margin-right: 20px;
+}
+
+.code{
+    position: relative;
+    overflow: visible;
+    border-style: ridge;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+.code button {
+    -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border: 0;
+
+}
+.code:hover button{
+    opacity: 1
+}
+
+span.toggle{
+	font-size: .8em;
+	font-weight: bold;
+    font-style: italic;
+	color: #C00000;
+    display: block;
+    cursor: pointer;
+    margin-left: 2em;
+}
+
+#completionMessage{
+	display: none; 
+	color: green; 
+	font-weight: bold; 
+	margin-top: 20px;
+}
+#completionButton{
+	padding: 10px 20px; 
+	margin-top: 20px; 
+	background: #27ae60; 
+	color: white; 
+	border: none; 
+	border-radius: 5px;
+}
+#completionButton:hover {
+    background: #1e8449;
+    cursor: pointer;
+}
+
+p{
+	margin-left: 40px;
+} 
+p.numbered {
+    color: #338DCD;
+	margin-left: 40px;
+}
+
+ul{
+   margin-left: 20px;
+}
+
+p.numbered:hover{
+	background: rgba(255, 171, 40, 0.1);
+}
+
+p.numbered:before {
+    font-weight: bold;
+    counter-increment: section;
+    content: "Step " counter(section) ". ";
+    margin-right: 8px;
+
+}
+
+footer {
+      background: #e9edf1;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: #4a4a4a;
+      font-size: 0.7rem;
+}
+
+a.toggle, a.toggle:visited{
+    text-decoration: none;
+    color: #002251;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+a.copyToClipboard, a.copyToClipboard:visited{
+    text-decoration: none;
+    color: #002251;
+    float: right;
+    font-weight: bold;
+}
+
+
+pre.code{
+   font-size: 14px;
+   border-radius: 8px;
+   background: #f4f4f4;
+    border-left: 4px solid #338DCD;
+    padding: 1em;
+    overflow-x: auto;
+    margin-left: 40px;
+
+}
+/* index.html */
+h1.courseTitle{
+	font-size: 60px;
+	text-align: center;
+	color:#FFAB40
+}
+.courseModule{
+	margin: auto;
+	width: 60%;
+}
+p.moduleTitle{
+	font-size: 32px;
+	color: #85D5E6
+}
+p.moduleTitle::before {
+  display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.375rem;
+    border-radius: 0.375rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-right: 0.5rem;
+    background-color: #85D5E6;
+}
+p.moduleTask a{
+		font-size:25px;
+		color: white;
+		text-decoration: none;
+}
+p.moduleTask::before {
+  display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.375rem;
+    border-radius: 0.375rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-right: 0.5rem;
+	margin-left: 3rem;
+    background-color: #FFAB40;
+}
+
+/* # Highlight.js */
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+}
+
+
+.hljs {
+    display: block;
+    padding: 1em;
+    background: white;
+    color: black;
+}
+
+.hljs-subst, .hljs-title {
+    font-weight: 400;
+    color: #000
+}
+
+.hljs-comment, .hljs-quote {
+    color: green;
+    font-style: italic
+}
+
+.hljs-meta {
+    color: olive
+}
+
+.hljs-tag {
+    background: #ffffff
+}
+
+.hljs-keyword, .hljs-literal, .hljs-name, .hljs-section, .hljs-selector-class, .hljs-selector-id, .hljs-selector-tag, .hljs-type {
+    font-weight: 700;
+    color: navy
+}
+
+.hljs-attribute, .hljs-link, .hljs-number, .hljs-regexp {
+    font-weight: 700;
+    color: #00f
+}
+
+.hljs-link, .hljs-number, .hljs-regexp {
+    font-weight: 400
+}
+
+.hljs-string {
+    color: green;
+    font-weight: 700
+}
+
+.hljs-bullet, .hljs-formula, .hljs-symbol {
+    color: #000;
+    background: #d0eded;
+    font-style: italic
+}
+
+.hljs-doctag {
+    text-decoration: underline
+}
+
+.hljs-template-variable, .hljs-variable {
+    color: #660e7a
+}
+
+.hljs-addition {
+    background: #baeeba
+}
+
+.hljs-deletion {
+    background: #ffc8bd
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-strong {
+    font-weight: 700
+}
+
+
+[aria-label]:after {
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+    top: 110%;
+    z-index: 5000;
+    pointer-events: none;
+    padding: 8px 10px;
+    line-height: 15px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-indent: 0;
+    overflow: visible;
+    font-size: .9em;
+    font-weight: normal;
+    color: #FFFFFF;
+    background-color: #338DCF;
+    border-radius: 5px;
+}
+
+[aria-label]:hover:after, [aria-label]:focus:after {
+    display: block;
+}
+/* Dropdown */
+.dropdown-container {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: -250px;
+    margin: auto;
+    width: 80%;
+	max-width: 1024px;
+	background: rgba(51, 141, 205, 0.9); 
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: top 0.5s ease;
+	border-radius: 10px;
+}
+
+.dropdown-container:hover .dropdown-content {
+    top: 0px;
+}
+
+a.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #F87706;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.download-link:hover {
+    background: #e67e22;
+}
+
+.ai-prompt {
+    display: flex;  /* Ensures icon and text are properly aligned */
+    align-items: flex-start;
+    padding-left: 40px;  /* Space for the icon */   
+    white-space: pre-wrap; /* Enables word wrapping */
+    word-break: break-word; /* Ensures long words wrap */
+    overflow-wrap: break-word; /* Forces wrapping in all browsers */
+    max-width: 100%; /* Prevents horizontal overflow */
+}
+
+.ai-prompt::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 29px;
+	margin-left: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;  /* Moves icon to the left */
+    top: 10px; /* Adjust vertical alignment */
+}
+
+#course-menu {
+  background: linear-gradient(180deg, #f4365e 0%, #c90f4e 100%);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#course-menu a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+#course-menu a:first-child {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+#course-menu a:hover {
+  color: #ffffff;
+}
