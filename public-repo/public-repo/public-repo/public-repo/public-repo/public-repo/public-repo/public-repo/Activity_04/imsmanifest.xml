@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="TriveraAI_WebDev_Course" version="1.0"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+          xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3"
+          xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3"
+          xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                              http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+                              http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+                              http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+                              http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
+
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 4th Edition</schemaversion>
+    <lom:lom xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+      <lom:general>
+        <lom:title>
+          <lom:langstring>Een spraakassistent bouwen</lom:langstring>
+        </lom:title>
+        <lom:description>
+          <lom:langstring>Een spraakassistent bouwen</lom:langstring>
+        </lom:description>
+        <lom:keyword>
+          <lom:langstring>Trivera Technologies</lom:langstring>
+        </lom:keyword>
+      </lom:general>
+    </lom:lom>
+  </metadata>
+
+  <organizations default="Triveratech">
+    <organization identifier="Triveratech">
+      <title>aistudio.voice.agent</title>
+      <item identifier="Een spraakassistent bouwen" identifierref="resource1">
+        <title>Welcome and Prerequisites</title>
+        <adlcp:dataFromLMS></adlcp:dataFromLMS>
+      </item>
+    </organization>
+  </organizations>
+
+  <resources>
+    <resource identifier="resource1" type="webcontent" adlcp:scormType="sco" href="index.html">
+      <file href="index.html"/>
+	  <file href="css/sparf.css"/>
+	  <file href="js/clipboard.min.js"/>
+	  <file href="js/highlight.min.js"/>
+	  <file href="js/jquery.min.js"/>
+	  <file href="js/script.js"/>
+	  <file href="js/scorm-api-wrapper.js"/>
+	  <file href="js/sparf.js"/>
+	  
+    </resource>
+  </resources>
+</manifest>
