@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="TriveraAI_WebDev_Course" version="1.0"
+<manifest identifier="SparfIT_Course" version="1.0"
           xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
           xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
           xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3"
@@ -18,22 +18,22 @@
     <lom:lom xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
       <lom:general>
         <lom:title>
-          <lom:langstring>Maak een Custom GPT</lom:langstring>
+          <lom:langstring>Maak een Gemini Gem</lom:langstring>
         </lom:title>
         <lom:description>
-          <lom:langstring>Maak een Custom GPT</lom:langstring>
+          <lom:langstring>Maak een Gemini Gem</lom:langstring>
         </lom:description>
         <lom:keyword>
-          <lom:langstring>Trivera Technologies</lom:langstring>
+          <lom:langstring>Sparf IT</lom:langstring>
         </lom:keyword>
       </lom:general>
     </lom:lom>
   </metadata>
 
-  <organizations default="Triveratech">
-    <organization identifier="Triveratech">
-      <title>openai.custom.gpt</title>
-      <item identifier="Maak een Custom GPT" identifierref="resource1">
+  <organizations default="SparfIT">
+    <organization identifier="SparfIT">
+      <title>gemini.gem</title>
+      <item identifier="Maak een Gemini Gem" identifierref="resource1">
         <title>Welcome and Prerequisites</title>
         <adlcp:dataFromLMS></adlcp:dataFromLMS>
       </item>

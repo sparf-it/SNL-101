@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="TriveraAI_WebDev_Course" version="1.0"
+<manifest identifier="SparfIT_Course" version="1.0"
           xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
           xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
           xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3"
@@ -24,14 +24,14 @@
           <lom:langstring>Prompting Best Practices</lom:langstring>
         </lom:description>
         <lom:keyword>
-          <lom:langstring>Trivera Technologies</lom:langstring>
+          <lom:langstring>Sparf IT</lom:langstring>
         </lom:keyword>
       </lom:general>
     </lom:lom>
   </metadata>
 
-  <organizations default="Triveratech">
-    <organization identifier="Triveratech">
+  <organizations default="SparfIT">
+    <organization identifier="SparfIT">
       <title>prompt.engineering.best.practices</title>
       <item identifier="Prompting Best Practices" identifierref="resource1">
         <title>Welcome and Prerequisites</title>
